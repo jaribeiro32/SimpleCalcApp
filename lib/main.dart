@@ -13,20 +13,48 @@ class _SimpleCalcAppState extends State<SimpleCalcApp> {
   @override
   Widget build(BuildContext context) {
     TextField num1 = TextField(
-      keyboardType: TextInputType.number,
-    );
+        keyboardType: TextInputType.number,
+        style: TextStyle(color: Colors.deepOrange),
+        decoration: InputDecoration(
+            labelText: '1º Valor',
+            labelStyle: TextStyle(color: Colors.deepOrange),
+            enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.deepOrange, width: 1.0)),
+            focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.deepOrange, width: 1.0))));
 
     TextField num2 = TextField(
-      keyboardType: TextInputType.number,
-    );
+        keyboardType: TextInputType.number,
+        style: TextStyle(color: Colors.deepOrange),
+        decoration: InputDecoration(
+            labelText: '2º Valor',
+            labelStyle: TextStyle(color: Colors.deepOrange),
+            enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.deepOrange, width: 1.0)),
+            focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.deepOrange, width: 1.0))));
 
     RaisedButton button = RaisedButton(
       onPressed: () {},
       child: Text('Calcular'),
+      color: Colors.deepOrange,
+      textColor: Colors.white,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16.9)),
     );
 
+    Padding separator = Padding(padding: EdgeInsets.all(4.0));
+
     Column columns = Column(
-      children: [num1, num2, button],
+      children: [
+        num1,
+        separator,
+        num2,
+        separator,
+        SizedBox(
+          child: button,
+          width: double.infinity,
+        )
+      ],
     );
     return MaterialApp(
       title: 'Simple Calc App',
@@ -34,6 +62,7 @@ class _SimpleCalcAppState extends State<SimpleCalcApp> {
         appBar: AppBar(
           title: Text('Simple Calc App'),
           centerTitle: true,
+          backgroundColor: Colors.deepOrange,
         ),
         body: Padding(
           padding: EdgeInsets.all(14.0),
