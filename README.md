@@ -1,6 +1,8 @@
-# simple_calc_app
+# SimpleCalcApp
 
-A new Flutter project.
+Simple Flutter Application - Sum Integer Numbers
+
+![alt text](https://conectatecnologia.com.br/LinkedImages/SimpleCalcApp.png)
 
 ## Getting Started
 
